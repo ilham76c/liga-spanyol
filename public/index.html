@@ -6,12 +6,12 @@
         name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <meta name="description" content="Jadwal Liga Spanyol">
-        <link rel="stylesheet" href="css/materialize.min.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="/public/css/materialize.min.css">
+        <link rel="stylesheet" href="/public/css/style.css">
         <!-- <link rel="stylesheet" href="css/icon.css"> -->
-        <link rel="manifest" href="/manifest.json">
+        <link rel="manifest" href="/public/manifest.json">
         <meta name="theme-color" content="#0278AE"/>
-        <link rel="apple-touch-icon" href="img/maskable_icon.png">
+        <link rel="apple-touch-icon" href="/public/img/maskable_icon.png">
         <title>Liga Spanyol</title>       
     </head>
     <body class="yrav-bg-dark">
@@ -27,11 +27,11 @@
 
         <div id="body-content" class="py-3"></div>
         <!-- <script type="text/javascript" src="https://unpkg.com/snarkdown@1.0.2/dist/snarkdown.umd.js"></script> -->
-        <script src="/js/ThirdParty/materialize.min.js"></script>
-        <script src="/js/ThirdParty/idb.js"></script>
-        <script src="/js/db.js"></script>
-        <script src="/js/nav.js"></script>
-        <script src="/js/api.js"></script>
+        <script src="/public/js/ThirdParty/materialize.min.js"></script>
+        <script src="/public/js/ThirdParty/idb.js"></script>
+        <script src="/public/js/db.js"></script>
+        <script src="/public/js/nav.js"></script>
+        <script src="/public/js/api.js"></script>
 
         <!-- <script src="js/jquery-3.2.1.min.js"></script> -->
         <script>
@@ -44,7 +44,7 @@
 
             // REGISTER SERVICE WORKER
             function registerServiceWorker() {            
-                return navigator.serviceWorker.register("/service-worker.js").then(function () {
+                return navigator.serviceWorker.register("/public/service-worker.js").then(function () {
                     console.log("Pendaftaran ServiceWorker berhasil");
                 }).catch(function () {
                     console.log("Pendaftaran ServiceWorker gagal");

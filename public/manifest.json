@@ -2,13 +2,13 @@
     "name": "Liga Spanyol",
     "short_name": "LaSpa",
     "description": "Toko Baju Online",
-    "start_url": "/index.html",
+    "start_url": "/public/index.html",
     "display": "standalone",
     "background_color": "#9AD0CA",
     "theme_color": "#9AD0CA",
     "icons": [
         {
-            "src": "img/maskable_icon.png",
+            "src": "/public/img/maskable_icon.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
