@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
         };
-        xhttp.open("GET", "/public/pages/" + page + ".html", true);
+        xhttp.open("GET", "pages/" + page + ".html", true);
         xhttp.send();
     }
 
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
             }    
         };     
-        xhttp.open("GET", "/public/nav.html", true);
+        xhttp.open("GET", "nav.html", true);
         xhttp.send();
     }
     function addClass(id) {

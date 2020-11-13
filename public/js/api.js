@@ -180,7 +180,7 @@ function renderSavedMatches(match) {
                         </p>
                     </div>
                     <div class="col l4 text-center">
-                        <img src="/public/img/laliga.png" alt="logo" style="max-height: 30px;">
+                        <img src="img/laliga.png" alt="logo" style="max-height: 30px;">
                     </div>
                     <div class="col s4 m6 l4 text-center">
                         <p class="mb-0">
@@ -193,7 +193,7 @@ function renderSavedMatches(match) {
                     </div>
                 </div>
             </div>
-            <a href="/public/match.html?saved=true&id=${match.id}" style="text-decoration: none; color: black;">
+            <a href="match.html?saved=true&id=${match.id}" style="text-decoration: none; color: black;">
             <div class="col s12 m12 l8">
                 <div class="row text-center">
                     <div class="col s5 m5 l5 mt-3">
@@ -235,7 +235,7 @@ function getSavedMatchesById() {
             <div class="container px-2 d-flex flex-column w-100 h-100 justify-content-center align-items-center">
             <div class="d-flex flex-column justify-content-evenly align-items-center h-50">
                     <div class="d-flex flex-column align-items-center">
-                    <img src="/public/img/laliga.png" alt="logo" style="max-height: 40px;">
+                    <img src="img/laliga.png" alt="logo" style="max-height: 40px;">
                         <p>Matchday ${data.match.matchday}</p>
                     </div>
 
@@ -342,7 +342,7 @@ function renderMatch(match) {
                         </p>
                     </div>
                     <div class="col l4 text-center">
-                        <img src="/public/img/laliga.png" alt="logo" style="max-height: 30px;">
+                        <img src="img/laliga.png" alt="logo" style="max-height: 30px;">
                     </div>
                     <div class="col s4 m6 l4 text-center">
                         <p class="mb-0">
@@ -353,7 +353,7 @@ function renderMatch(match) {
                     </div>
                 </div>
             </div>
-            <a href="/public/match.html?id=${match.id}" style="text-decoration: none; color: black;">
+            <a href="match.html?id=${match.id}" style="text-decoration: none; color: black;">
             <div class="col s12 m12 l8">
                 <div class="row text-center">
                     <div class="col s5 m5 l5 mt-3">
@@ -406,11 +406,11 @@ function renderStanding(standing) {
         <td>${standing.goalsAgainst}</td>                                
         <td>${standing.goalDifference}</td>
         <td class="text-center">
-            <img src="/public/img/${form[0]}.png" style="max-height: 15px;">
-            <img src="/public/img/${form[1]}.png" style="max-height: 15px;">
-            <img src="/public/img/${form[2]}.png" style="max-height: 15px;">
-            <img src="/public/img/${form[3]}.png" style="max-height: 15px;">
-            <img src="/public/img/${form[4]}.png" style="max-height: 15px;">
+            <img src="img/${form[0]}.png" style="max-height: 15px;">
+            <img src="img/${form[1]}.png" style="max-height: 15px;">
+            <img src="img/${form[2]}.png" style="max-height: 15px;">
+            <img src="img/${form[3]}.png" style="max-height: 15px;">
+            <img src="img/${form[4]}.png" style="max-height: 15px;">
         </td>
     </tr>                                                                                                                    
     `;
@@ -423,7 +423,7 @@ function renderMatchById(match) {
             <div class="container px-2 d-flex flex-column w-100 h-100 justify-content-center align-items-center">
                 <div class="d-flex flex-column justify-content-evenly align-items-center h-50">
                     <div class="d-flex flex-column align-items-center">
-                        <img src="/public/img/laliga.png" alt="logo" style="max-height: 40px;">
+                        <img src="img/laliga.png" alt="logo" style="max-height: 40px;">
                         <p>Matchday ${match.matchday}</p>
                     </div>
 
