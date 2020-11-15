@@ -39,37 +39,20 @@ function error(error) {
     console.error("Error : " + error);
 }
 
-function getMatches() {
-    if ("caches" in window) {
-        caches.match(base_url + "competitions/2014/matches?status=SCHEDULED")
-            .then(function(response) {
-                if (response) {
-                    response.json().then(function(data) {
-
-                        let articleHTML = "";                        
-                        data.matches.forEach(function(match) {                               
-                            articleHTML += renderMatch(match);                                                     
-                        });
-                        // Sisipkan komponen card ke dalam elemen dengan id #content
-                        document.getElementById("matches").innerHTML = articleHTML;
-                    });
-                } else {
-                    fetch(base_url + "competitions/2014/matches?status=SCHEDULED", {
-                        headers: header                        
-                    })
-                    .then(status)
-                    .then(json)
-                    .then(function(data) {                            
-                        let articleHTML = "";
-                        data.matches.forEach(function(match) {                            
-                            articleHTML += renderMatch(match);                                         
-                        });
-                        document.getElementById("matches").innerHTML = articleHTML;            
-                    });
-                }                
-            })
-            .catch(error);            
-    }     
+function getMatches() {            
+    fetch(base_url + "competitions/2014/matches?status=SCHEDULED", {
+        headers: header                        
+    })
+    .then(status)
+    .then(json)
+    .then(function(data) {                            
+        let articleHTML = "";
+        data.matches.forEach(function(match) {                            
+            articleHTML += renderMatch(match);                                         
+        });
+        document.getElementById("matches").innerHTML = articleHTML;            
+    })
+    .catch(error);                  
 }
 
 
@@ -79,19 +62,19 @@ function getMatchesById() {
         let url_params = new URLSearchParams(window.location.search);
         let id_param = url_params.get("id");
 
-        if ("caches" in window) {
-            caches.match(base_url + "matches/" + id_param)
-                .then(function(response) {
-                    if (response) {
-                        response.json().then(function(data) {                            
-                            // Sisipkan komponen ke dalam elemen dengan id #body-content
-                            document.getElementById("body-content").innerHTML = renderMatchById(data.match);
-                            // Kirim objek data hasil parsing json agar bisa disimpan ke indexed db
-                            resolve(data);
-                        });
-                    } 
-                });
-        } 
+        // if ("caches" in window) {
+        //     caches.match(base_url + "matches/" + id_param)
+        //         .then(function(response) {
+        //             if (response) {
+        //                 response.json().then(function(data) {                            
+        //                     // Sisipkan komponen ke dalam elemen dengan id #body-content
+        //                     document.getElementById("body-content").innerHTML = renderMatchById(data.match);
+        //                     // Kirim objek data hasil parsing json agar bisa disimpan ke indexed db
+        //                     resolve(data);
+        //                 });
+        //             } 
+        //         });
+        // } 
 
         fetch(base_url + "matches/" + id_param, {            
             headers: header
@@ -130,38 +113,21 @@ function getSavedMatches() {
     });
 }
 
-function getStandings() {
-    if ("caches" in window) {
-        caches.match(base_url + "competitions/2014/standings")
-        .then(function(response) {
-                if (response) {
-                    response.json().then(function(data) {                        
-                        let articleHTML = "";                        
-                        data.standings[0].table.forEach(function(standing) {   
-                            // console.log(article);                            
-                            articleHTML += renderStanding(standing);                                                    
-                        });                
-                        // Sisipkan komponen card ke dalam elemen dengan id #standings
-                        document.getElementById("standings").innerHTML = renderStandingTable(articleHTML);
-                    });
-                } else {
-                    fetch(base_url + "competitions/2014/standings", {
-                        headers: header                        
-                    })
-                    .then(status)
-                    .then(json)
-                    .then(function(data) {                           
-                        let articleHTML = "";
-                        data.standings[0].table.forEach(function(standing) { 
-                            articleHTML += renderStanding(standing);                       
-                        });                       
-                        // Sisipkan komponen card ke dalam elemen dengan id #standings
-                        document.getElementById("standings").innerHTML = renderStandingTable(articleHTML);
-                    });
-                }                
-            })
-            .catch(error);            
-    } 
+function getStandings() {    
+    fetch(base_url + "competitions/2014/standings", {
+        headers: header                        
+    })
+    .then(status)
+    .then(json)
+    .then(function(data) {                           
+        let articleHTML = "";
+        data.standings[0].table.forEach(function(standing) { 
+            articleHTML += renderStanding(standing);                       
+        });                       
+        // Sisipkan komponen card ke dalam elemen dengan id #standings
+        document.getElementById("standings").innerHTML = renderStandingTable(articleHTML);
+    })              
+    .catch(error);            
 }
 
 function renderSavedMatches(match) {
