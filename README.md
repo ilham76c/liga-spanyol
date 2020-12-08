@@ -9,4 +9,6 @@ Aplikasi yang menampilkan informasi jadwal pertandingan dan klasemen liga spanyo
 
 ## Release
 URL untuk akases aplikasi
-[Laliga Info](https://submission2-v1.web.app/)
+```
+[Web Jadwal Pertanidnga Liga Spanyol/Laliga](https://submission2-v1.web.app/)
+```
