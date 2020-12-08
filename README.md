@@ -8,7 +8,5 @@ Aplikasi yang menampilkan informasi jadwal pertandingan dan klasemen liga spanyo
 - Aplikasi ini menggunakan service-worker untuk membuat aplikasi bisa digunakan secara offline.
 
 ## Release
-URL untuk akases aplikasi
-```
+URL untuk akases aplikasi: 
 [Web Jadwal Pertanidnga Liga Spanyol/Laliga](https://submission2-v1.web.app/)
-```
