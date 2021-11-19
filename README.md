@@ -17,4 +17,4 @@ Berikut adalah teknologi yang digunakan dalam membangun aplikasi ini:
 
 ## Release
 URL untuk akses aplikasi: 
-[Web Jadwal Pertandingan Laliga](https://submission2-v1.web.app/)
+[Web Jadwal Pertandingan Laliga](https://submission2-v1.web.app/){:target="_blank"}
