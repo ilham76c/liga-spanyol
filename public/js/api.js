@@ -351,7 +351,7 @@ function renderMatch(match) {
 }
 
 function renderStanding(standing) {
-    let form = standing.form.split(",");
+    let form = standing.form ? standing.form.split(",") : [];
     return `                               
     <tr>
     <td>
@@ -372,11 +372,11 @@ function renderStanding(standing) {
         <td>${standing.goalsAgainst}</td>                                
         <td>${standing.goalDifference}</td>
         <td class="text-center">
-            <img src="img/${form[0]}.png" style="max-height: 15px;">
-            <img src="img/${form[1]}.png" style="max-height: 15px;">
-            <img src="img/${form[2]}.png" style="max-height: 15px;">
-            <img src="img/${form[3]}.png" style="max-height: 15px;">
-            <img src="img/${form[4]}.png" style="max-height: 15px;">
+            ${
+                form.map(val => {
+                    return `<img src="img/${val}.png" style="max-height: 15px;"></img>`
+                }).join('')
+            }
         </td>
     </tr>                                                                                                                    
     `;
