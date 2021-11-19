@@ -16,6 +16,4 @@ Berikut adalah teknologi yang digunakan dalam membangun aplikasi ini:
 - API: [https://api.football-data.org/](https://api.football-data.org/)
 
 ## Release
-URL untuk akses aplikasi: 
-<!--[App Jadwal Pertandingan Laliga](https://submission2-v1.web.app/)-->
-<a href="https://submission2-v1.web.app/" target="_blank">App Jadwal Pertandingan Laliga</a>
+URL untuk akses aplikasi: [App Jadwal Pertandingan Laliga](https://submission2-v1.web.app/)
