@@ -1,4 +1,4 @@
-var base_url = "https://api.football-data.org/v2/";
+var base_url = "https://api.football-data.org/v4/";
 
 const header = {     
     'X-Auth-Token': '89d8558f7fef4854b05735ea59829932'
